@@ -7,7 +7,7 @@ namespace Database.Model
         [Key]
         public string UserId { get; set; } = Guid.NewGuid().ToString();
         [Required]
-        public string UserName { get; set; }
+        public string FullName { get; set; }
         [Required]
         public string UserPassword { get; set; }
         [Required]
