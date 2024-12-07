@@ -1,11 +1,13 @@
-﻿namespace Database.Model
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace Database.Model
 {
     public class Inventory
     {
         [Key]
         public string ItemId { get; set; } = Guid.NewGuid().ToString();
-        [Required]
-        public string ItemName { get; set; }
+        [Required,MaxLength(40)]
+        public string? ItemName { get; set; }
         [Required]
         public string ItemDetails { get; set; }
         [Required]
