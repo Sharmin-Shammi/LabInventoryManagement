@@ -2,7 +2,7 @@
 
 namespace Database.Model
 {
-    public class Inventory
+    public class Inventory:BaseModel
     {
         [Key]
         public string ItemId { get; set; } = Guid.NewGuid().ToString();

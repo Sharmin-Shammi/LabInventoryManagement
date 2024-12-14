@@ -1,6 +1,6 @@
 ﻿namespace Database.Model
 {
-    public class Document
+    public class Document:BaseModel
     {
         [Key] 
         public string DocumentId { get; set; } = Guid.NewGuid().ToString();

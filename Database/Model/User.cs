@@ -2,7 +2,7 @@
 
 namespace Database.Model
 {
-    public class User
+    public class User:BaseModel
     {
         [Key]
         public string UserId { get; set; } = Guid.NewGuid().ToString();

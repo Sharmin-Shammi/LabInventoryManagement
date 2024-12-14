@@ -1,6 +1,6 @@
 ﻿namespace Database.Model
 {
-    public class Supplier
+    public class Supplier:BaseModel
     {
         [Key]
         public string SupplierId { get; set; } = Guid.NewGuid().ToString();

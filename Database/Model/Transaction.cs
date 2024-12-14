@@ -2,7 +2,7 @@
 
 namespace Database.Model
 {
-    public class Transaction
+    public class Transaction:BaseModel
     {
         [Key]
         public string TransactionId { get; set; } = Guid.NewGuid().ToString();

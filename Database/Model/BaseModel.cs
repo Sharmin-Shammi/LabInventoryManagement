@@ -8,5 +8,11 @@ namespace Database.Model
 {
     internal class BaseModel
     {
+        public string CreatedBy { get; set; }
+        public string UpdatedBy { get; set; }
+        public int Id { get; set}
+
+
+
     }
 }

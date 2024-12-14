@@ -1,6 +1,6 @@
 ﻿namespace Database.Model
 {
-    public class Deadline
+    public class Deadline:BaseModel
     {
         [Key]
         public string DeadlineId { get; set; } = Guid.NewGuid().ToString();
