@@ -3,14 +3,14 @@ using Database.Model;  // Import your models here
 
 namespace Database.Context
 {
-    public class LabInventoryContext : DbContext
+    public void ConfigureServices(IServiceCollection services)
     {
-        // Constructor that passes options to the base class
-        public LabInventoryContext(DbContextOptions<LabInventoryContext> options)
-            : base(options) { }
+        services.AddDbContext<LabInventoryContext>(options =>
+            options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+    }
 
-        // DbSets representing tables in the database
-        public DbSet<Inventory> Inventory { get; set; }
+    // DbSets representing tables in the database
+    public DbSet<Inventory> Inventory { get; set; }
         public DbSet<Supplier> Supplier { get; set; }
         public DbSet<Transaction> Transaction { get; set; }
         public DbSet<User> User { get; set; }
